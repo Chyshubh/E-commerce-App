@@ -4,7 +4,7 @@ import 'dotenv/config'
 import connectDb from './config/mongodb.js';
 import connectCloudinary from './config/cloudinary.js';
 import userRouter from './routes/userRoute.js';
-import productRouter from './routes/productroute.js';
+import productRouter from './routes/productRoute.js';
 import kartRouter from './routes/KartRoute.js';
 import orderRouter from './routes/orderRoute.js';
 
