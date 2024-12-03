@@ -14,9 +14,15 @@ const port = process.env.PORT || 8000;
 connectDb();
 connectCloudinary();
 
+const corsOptions = {
+  origin: 'https://e-commerce-app-backend-sigma.vercel.app', // Replace with your frontend URL on Vercel
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
+};
+
 //middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 //api endpoints
 app.use('/api/user', userRouter);
