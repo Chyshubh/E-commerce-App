@@ -10,7 +10,7 @@ const ShopContextProvider = (props) => {
 
     const currency = "$"
     const delivery_fee = 10;
-    const backendUrl = "http://localhost:8000";
+    const backendUrl = "https://e-commerce-app-backend-hiyqzw3os-shubham-parasars-projects.vercel.app";
     const [search, setSearch] = useState('');
     const [showSearch, setShowSearch] = useState(false);
     const [kartItems, setKartItems] = useState({});
@@ -47,7 +47,7 @@ const ShopContextProvider = (props) => {
         if (token) {
             try {
 
-                await axios.post('http://localhost:8000/api/kart/add', { itemId, size }, { headers: { token } })
+                await axios.post('https://e-commerce-app-backend-hiyqzw3os-shubham-parasars-projects.vercel.app/api/kart/add', { itemId, size }, { headers: { token } })
 
             } catch (error) {
                 console.log(error);
