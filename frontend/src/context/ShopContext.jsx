@@ -47,7 +47,7 @@ const ShopContextProvider = (props) => {
         if (token) {
             try {
 
-                await axios.post('https://e-commerce-app-backend-hiyqzw3os-shubham-parasars-projects.vercel.app/api/kart/add', { itemId, size }, { headers: { token } })
+                await axios.post(`${backendUrl}/api/kart/add`, { itemId, size }, { headers: { token } })
 
             } catch (error) {
                 console.log(error);
