@@ -9,7 +9,6 @@ import kartRouter from './routes/KartRoute.js';
 import orderRouter from './routes/orderRoute.js';
 
 //App Config
-const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 8000;
 connectDb();
