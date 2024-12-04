@@ -18,16 +18,14 @@ connectCloudinary();
 
 const allowedOrigins = ['https://forever-app-shubham.vercel.app'];
 
+//middlewares
 app.use(cors({
     origin: allowedOrigins,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     credentials: true,
 }));
 
-
-//middlewares
 app.use(express.json());
-app.use(cors(corsOptions));
 
 //api endpoints
 app.use('/api/user', userRouter);
