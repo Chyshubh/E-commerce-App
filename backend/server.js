@@ -9,16 +9,21 @@ import kartRouter from './routes/KartRoute.js';
 import orderRouter from './routes/orderRoute.js';
 
 //App Config
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 8000;
 connectDb();
 connectCloudinary();
 
-const corsOptions = {
-  origin: 'https://e-commerce-app-backend-sigma.vercel.app', // Replace with your frontend URL on Vercel
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type'],
-};
+
+const allowedOrigins = ['https://forever-app-shubham.vercel.app'];
+
+app.use(cors({
+    origin: allowedOrigins,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    credentials: true,
+}));
+
 
 //middlewares
 app.use(express.json());
