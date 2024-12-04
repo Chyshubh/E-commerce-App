@@ -15,7 +15,11 @@ connectDb();
 connectCloudinary();
 
 
-const allowedOrigins = ['https://forever-app-shubham.vercel.app'];
+const allowedOrigins = [
+  'https://forever-app-shubham.vercel.app', 
+  'https://forever-adminpanel.vercel.app'  // Add this origin for admin panel
+];
+
 
 //middlewares
 app.use(cors({
